@@ -31,6 +31,8 @@
                         </p>
                         <form class="form-group" action="{{ route('Sum-Method') }}" method="get">
                             <div class="row justify-content-around align-items-center">
+                                <p class=" py-2 small">تعداد خطوط مورد نظر را وارد کنید . به دلیل نمایش بهتر مقدار بیشینه 20
+                                    خط میباشد .</p>
                                 <input class="col-2 form-group" type="number" name="Line" min="0" max="20" value="10">
                                 <button class="col-8 btn btn btn-block btn-primary mb-2">دیدن مثلث پاسکال</button>
                             </div>
@@ -47,6 +49,8 @@
                         </p>
                         <form class="form-group" action="{{ route('Factorial-Method') }}" method="get">
                             <div class="row justify-content-around align-items-center">
+                                <p class=" py-2 small">تعداد خطوط مورد نظر را وارد کنید . به دلیل نمایش بهتر مقدار بیشینه 20
+                                    خط میباشد .</p>
                                 <input class="col-2 form-group" type="number" name="Line" min="0" max="20" value="10">
                                 <button class="col-8 btn btn btn-block btn-primary mb-2">دیدن مثلث پاسکال</button>
                             </div>

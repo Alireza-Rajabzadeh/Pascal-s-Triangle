@@ -8,9 +8,16 @@ class KhayamController extends Controller
 {
     public function SumMethod(Request $request)
     {
-        $Target = $request->Line;
-        $Pascal = array();
-        for ($Line = 0; $Line <= $Target; $Line++) {
+        /*
+        First Method is calculating triangle by summing the top two cells
+        */
+        $MaxLine = $request->Line; // Number of the lines that user want
+        $Pascal = array(); // Define Array for Save the triangale values
+        /*
+        $Line is the Line of the Triangle
+        $N is index of the cell in line
+         */
+        for ($Line = 0; $Line <= $MaxLine; $Line++) {
             for ($N = 0; $N <= $Line; $N++) {
                 if ($N == 0 || $N == $Line) {
                     $Pascal[$Line][$N] = 1;
@@ -19,20 +26,27 @@ class KhayamController extends Controller
                 }
             }
         }
-        $title="SumMethod";
-        return(view("Show-Triangle",compact(['Pascal','title'])));
+        $title = "SumMethod"; // define title for view
+        return (view("Show-Triangle", compact(['Pascal', 'title'])));
     }
 
     public function FactorialModel(Request $request)
     {
-        $Pascal = array();
-        $Target = $request->Line;
-        for ($Line = 0; $Line <= $Target; $Line++) {
-            for ($index = 0; $index <= $Line; $index++) {
-                $Pascal[$Line][$index] = (gmp_fact($Line)) / (gmp_fact($index) * (gmp_fact(($Line - $index))));
+        /*
+        secound Method is calculating triangle by factorials formula L
+        */
+        $Pascal = array(); // Define Array for Save the triangale values
+        $MaxLine = $request->Line; // Number of the lines that user want
+        /*
+        $Line is the Line of the Triangle
+        $N is index of the cell in line
+         */
+        for ($Line = 0; $Line <= $MaxLine; $Line++) {
+            for ($N = 0; $N <= $Line; $N++) {
+                $Pascal[$Line][$N] = (gmp_fact($Line)) / (gmp_fact($N) * (gmp_fact(($Line - $N))));
             }
         }
-        $title="FactorialModel";
-        return(view("Show-Triangle",compact(['Pascal','title'])));
+        $title = "FactorialModel"; // define title for view
+        return (view("Show-Triangle", compact(['Pascal', 'title'])));
     }
 }

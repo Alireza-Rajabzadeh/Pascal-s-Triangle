@@ -1,4 +1,5 @@
 @extends('Master.Master')
+{{-- By checking the value of $title that defined in 'KhayamController' we will recognise which of our methods used --}}
 @if ($title == 'FactorialModel')
     @section('title', 'مثلث خیام با استفاده از فرمول فاکتوریل')
     @endif
@@ -6,27 +7,27 @@
         @section('title', 'مثلث خیام با استفاده جمع سلول ها')
         @endif
         @section('content')
-        @if ($title == 'FactorialModel')
-        <div class="intro shadow-lg rounded-top p-5 my-5 bg-light">
-            <h4 >مثلث خیام با استفاده از فرمول فاکتوریل</h4>
-            <p>
-                دز زیر با استفاده از فرمول فاکتوریل مثلث خیام پاسکال مقادیر هر سلول به دست آمده است .
-            </p>
-            <p class="text-left "><b> Cell[L][N] = L! / (N! * (L-N)! )</b></p>
-            <p>که در آن L سطر مثلث و N شماره سلول در آن سطر است .</p>
-        </div>
-        @endif
-        @if ($title == 'SumMethod')
-        <div class="intro shadow-lg rounded-top p-5 my-5 bg-light">
-            <h4>مثلث خیام با استفاده جمع سلول ها</h4>
-            <p>
-                با استفاده از فرمولی که در زیر مشاهده میکنید ، مقدار هر سلول را نسبت به دو سلول بالایی آن محاسبه کرده ایم .
-                <br>
-            </p>
-            <p class="text-left "><b> Cell[L][N] = Cell[L-1][N-1] + Cell[L-1][N] </b></p>
-            <p>که در آن L سطر مثلث و N شماره سلول در آن سطر است .</p>
-        </div>
-        @endif
+            @if ($title == 'FactorialModel')
+                <div class="intro shadow-lg rounded-top p-5 my-5 bg-light">
+                    <h4>مثلث خیام با استفاده از فرمول فاکتوریل</h4>
+                    <p>
+                        دز زیر با استفاده از فرمول فاکتوریل مثلث خیام پاسکال مقادیر هر سلول به دست آمده است .
+                    </p>
+                    <p class="text-left "><b> Cell[L][N] = L! / (N! * (L-N)! )</b></p>
+                    <p>که در آن L سطر مثلث و N شماره سلول در آن سطر است .</p>
+                </div>
+            @endif
+            @if ($title == 'SumMethod')
+                <div class="intro shadow-lg rounded-top p-5 my-5 bg-light">
+                    <h4>مثلث خیام با استفاده جمع سلول ها</h4>
+                    <p>
+                        با استفاده از فرمولی که در زیر مشاهده میکنید ، مقدار هر سلول را نسبت به دو سلول بالایی آن محاسبه کرده ایم .
+                        <br>
+                    </p>
+                    <p class="text-left "><b> Cell[L][N] = Cell[L-1][N-1] + Cell[L-1][N] </b></p>
+                    <p>که در آن L سطر مثلث و N شماره سلول در آن سطر است .</p>
+                </div>
+            @endif
             <section class=" mt-5 px-1">
                 <div class="bg-light shadow-lg  py-5 ">
                     @foreach ($Pascal as $item)
