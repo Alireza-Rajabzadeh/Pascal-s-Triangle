@@ -1,0 +1,34 @@
+/* @font-face {
+    font-family: "Vazir";
+    src: url("/public/assets/fonts/Yekan.woff");
+} */
+
+@font-face {
+    font-family: 'YJ';
+    src: url('/assets/fonts/Yekan.eot?#') format('eot'), /* IE6–8 */
+    url('/assets/fonts/Yekan.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/assets/fonts/Yekan.ttf') format('truetype');
+    /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+
+/*WebYekanNumberFont*/
+
+@font-face {
+    font-family: 'NYJ';
+    src: url('/assets/fonts/yekannumbers-regular.eot?#') format('eot'), /* IE6–8 */
+    url('/assets/fonts/yekannumbers-regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('/assets/fonts/yekannumbers-regular.ttf') format('truetype');
+    /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+body {
+    text-align: right !important;
+    font-family: 'YJ';
+    line-height: 1.6;
+    background: #fff;
+}
+
+.yekan {
+    font-family: 'NYJ';
+}
