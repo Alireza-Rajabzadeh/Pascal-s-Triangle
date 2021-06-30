@@ -36,7 +36,7 @@
                 @endforeach
             </div>
         </section>
-
+        <hr>
         <form class="row justify-content-center form-group my-3" action="{{ route('Factorial-Method') }}" method="get">
             <div class="col-6">
                 <div class="row">
@@ -45,6 +45,12 @@
                 </div>
             </div>
         </form>
+        <hr>
+        <div class="row justify-content-center">
+            <a href="/" class="col-6 btn btn-block btn-danger">
+                رفتن به صفحه اصلی
+            </a>
+        </div>
     @endsection
 @endif
 @if ($title == 'SumMethod')
@@ -86,6 +92,7 @@
                 @endforeach
             </div>
         </section>
+        <hr>
         <form class=" row justify-content-center form-group my-3" action="{{ route('Sum-Method') }}" method="get">
             <div class="col-6">
                 <div class="row">
@@ -94,5 +101,11 @@
                 </div>
             </div>
         </form>
+        <hr>
+        <div class="row justify-content-center">
+            <a href="/" class="col-6 btn btn-block btn-danger">
+                رفتن به صفحه اصلی
+            </a>
+        </div>
     @endsection
 @endif
